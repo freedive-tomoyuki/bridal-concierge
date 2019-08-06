@@ -1,0 +1,28 @@
+version: '2'
+services:
+  app:
+    build: ./infra/app
+    volumes:
+      - ./:/var/www
+    links:
+      - mysql
+  web:
+    build: ./infra/web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./certs/:/etc/pki/certs
+    links:
+      - app
+  mysql:
+    build: ./infra/mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./infra/mysql/mysql-data:/var/lib/mysql
+      - ./infra/mysql/sqls:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+

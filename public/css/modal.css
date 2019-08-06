@@ -1,0 +1,22 @@
+
+/*■■■modal■■■*/
+.modalWrapper {
+	background-color: #f5f5f5;
+	text-align: center;
+	padding: 40px;
+}
+.modalWrapper h2 {
+	font-weight: normal;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.privacy_txt {
+	background-color: #fff;
+	padding: 30px;
+	overflow-y: scroll;
+	transform: translateZ(0);
+	width: 100%;
+	height: 70vh;
+	line-height: 1.5;
+	text-align: left;
+}

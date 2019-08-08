@@ -12,6 +12,9 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <!--favicon-->
+        <link rel="shortcut icon" href="img/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         @yield('script')
     </head>
     <body>

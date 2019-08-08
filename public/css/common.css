@@ -17,6 +17,7 @@ strong {
 }
 /*■■■header■■■*/
 #wrapper {
+	padding-top: 70px;
 	position: relative;
 }
 header {
@@ -43,7 +44,7 @@ h1 a {
 }
 h1::before {
 	content: "";
-	background-image: url("../images/ttl_line.png");
+	background-image: url("../img/ttl_line.png");
 	background-size: 50%;
 	background-position: center 90%;
 	background-repeat: no-repeat;
@@ -179,6 +180,11 @@ margin-left: 20px;
 	font-weight: 400;
 	font-style: normal;
 }
+.f_marugo {
+	font-family: fot-tsukuardgothic-std, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
 .mglr-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -219,17 +225,13 @@ margin-left: 20px;
      top: 0;
      left: 0;
 }
-.is-menu-open {
-	/*
-  pointer-events: none;
-*/
-	transition: all .2s ease-out;
-	-webkit-filter: blur(8px);
-	-moz-filter: blur(8px);
-	-ms-filter: blur(8px);
-	filter: blur(8px);
-}
 /*■■■modal■■■*/
+body.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
 .modalArea {
 	display: none;
 	position: fixed;
@@ -242,7 +244,8 @@ margin-left: 20px;
 .modalBg {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.10);
+	background-color: rgba(0, 0, 0, 0.20);
+	
 }
 .modalWrapper {
 	position: absolute;
@@ -313,9 +316,6 @@ form ul li {
 	width: calc(50% - 15px);
 	text-align: center;
 	line-height: 1.75;
-}
-form ul li + li {
-	margin-left: 30px;
 }
 form ul li p {
 	font-weight: bold;
@@ -560,6 +560,9 @@ order: 99;
 	nav {
 		padding: 0;
 	}
+	h1 {
+		color: #55d0d4;
+	}
 	.menu {
 		display: none;
 		width: 100%;
@@ -664,16 +667,8 @@ order: 99;
 	h1::before {
 		display: none;
 	}
-		form ul {
-		flex-direction: column;
-	}
-	form ul li,
-	form,
-	form ul li {
-		width: 100%;
-	}
-	form ul li + li {
-		margin: 20px 0 0;
+	form ul {
+		justify-content: space-between;
 	}
 	/*map*/
 		.map_container img {
@@ -681,24 +676,6 @@ order: 99;
 	}
 	.search_map {
 		position: relative;
-	}
-	.area-tab {
-		width: 100%;
-		position: static;
-	}
-	.area-tab li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 14px;
-		line-height: 1.5;
-		padding-left: 20px;
-	}
-	.area-tab li:nth-child(5) {
-		font-size: 12px;
-	}
-	.area-tab li::before {
-		left: 10px;
 	}
 	
 	/*modal*/

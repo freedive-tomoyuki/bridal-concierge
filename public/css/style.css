@@ -17,6 +17,7 @@ p {
 }
 /*■■■fv■■■*/
 .fv {
+	/*margin-top: 70px;*/
 	padding: 70px 0 150px;
 	min-height: 80vh;
 	position: relative;
@@ -44,10 +45,10 @@ p {
 	width: calc(50% - 30px);
 }
 .fv_form ul {
-	justify-content: space-between;
+	justify-content: space-between;	
 }
 .fv_txt ul li {
-	background: url("../img/fv_circle.png") center center no-repeat;
+	background: url("/images/fv_circle.png") center center no-repeat;
 	background-size: contain;
 	width: 30%;
 	padding-top: 30%;
@@ -82,7 +83,7 @@ p {
 	margin-top: -100px;
 }
 .search_map {
-	background: url("../img/bg_pt01.jpg") repeat;
+	background: url("/images/bg_pt01.jpg") repeat;
 	position: relative;
 	padding-top: 100px;
 }
@@ -193,7 +194,7 @@ p {
 }
 /*■■■point■■■*/
 .point {
-	background: url("../img/bg_pt02.jpg") repeat;
+	background: url("/images/bg_pt02.jpg") repeat;
 	padding-bottom: 50px;
 }
 .point-list {
@@ -211,13 +212,13 @@ p {
 	position: relative;
 }
 .point-list li:nth-child(1) {
-	background-image: url("../img/point01.jpg");
+	background-image: url("/images/point01.jpg");
 }
 .point-list li:nth-child(2) {
-	background-image: url("../img/point02.jpg");
+	background-image: url("/images/point02.jpg");
 }
 .point-list li:nth-child(3) {
-	background-image: url("../img/point03.jpg");
+	background-image: url("/images/point03.jpg");
 }
 .point-list li::before {
 	counter-increment: point-list;
@@ -297,19 +298,19 @@ p {
 	z-index: 2;
 }
 .flow_list li:nth-of-type(1)::before {
-	background-image: url("../img/arrow01.png");
+	background-image: url("/images/arrow01.png");
 }
 .flow_list li:nth-of-type(2)::before {
-	background-image: url("../img/arrow02.png");
+	background-image: url("/images/arrow02.png");
 }
 .flow_list li:nth-of-type(3)::before {
-	background-image: url("../img/arrow03.png");
+	background-image: url("/images/arrow03.png");
 }
 .flow_list li:nth-of-type(4)::before {
-	background-image: url("../img/arrow04.png");
+	background-image: url("/images/arrow04.png");
 }
 .flow_list li:nth-of-type(5)::before {
-	background-image: url("../img/arrow05.png");
+	background-image: url("/images/arrow05.png");
 }
 .flow_txt {
 	padding: 30px;
@@ -361,8 +362,9 @@ p {
 	width: calc(40% - 15px);
 }
 .footer_form_txt ul li + li {
-	margin-left: 15px;
+	margin-left: 15px;	
 }
+
 .footer_form_txt ul .footer_form_map {
 	width: 15%;
 	max-width: 151px;
@@ -400,6 +402,7 @@ p {
 		padding: 30px 20px;
 		
 	}
+
 	.fv_inner ul {
 		justify-content: space-between;
 	}
@@ -423,9 +426,19 @@ p {
 		width: 30%;
 		margin: 5px;
 	}
+
+
+/*	
+	.fv_txt, .fv_form {
+		width: 100%;
+	}
 	.fv_txt ul li p {
 		font-size: 1rem;
 	}
+	.fv_txt {
+		margin-bottom: 30px;
+	}
+*/
 	.fv_form_cont > p {
 		font-weight: bold; 
 	}
@@ -445,24 +458,25 @@ p {
 	.search_map h2 span {
 		top: 35px;
 	}
-		.area-tab {
-		width: 100%;
-		position: static;
+	.area-tab {	
+		width: 100%;	
+		position: static;	
+	}	
+	.area-tab li {	
+		display: flex;	
+		align-items: center;	
+		justify-content: center;	
+		font-size: 14px;	
+		line-height: 1.5;	
+		padding-left: 20px;	
+	}	
+	.area-tab li:nth-child(5) {	
+		font-size: 12px;	
+	}	
+	.area-tab li::before {	
+		left: 10px;	
 	}
-	.area-tab li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 14px;
-		line-height: 1.5;
-		padding-left: 20px;
-	}
-	.area-tab li:nth-child(5) {
-		font-size: 12px;
-	}
-	.area-tab li::before {
-		left: 10px;
-	}
+
 
 	.merit-list {
 		flex-wrap: wrap;
@@ -491,7 +505,7 @@ p {
 	}
 	.flow::before {
 		content: "";
-		background: url("../img/bg_il01.jpg") center center no-repeat;
+		background: url("/images/bg_il01.jpg") center center no-repeat;
 		background-size: cover;
 		display: block;
 		width: 100vw;
@@ -529,21 +543,22 @@ p {
 		padding: 20px;
 	}
 	.footer_form_txt ul {
-		flex-direction: column;
+		flex-direction: column;	
+	}	
+	.footer_form_cont form,	
+	.footer_form_txt ul li {	
+		width: 100%;	
+	}	
+	.footer_form_txt ul li + li {	
+		margin-left: 0;	
 	}
-	.footer_form_cont form,
-	.footer_form_txt ul li {
-		width: 100%;
-	}
-	.footer_form_txt ul li + li {
-	margin-left: 0;
-}
 	.footer_form_txt ul .footer_form_map {
 		width: 50%;
 		max-width: 50%;
 		margin: 30px auto;
 	}
 	.form_submit {
+		/*padding: 20px;*/
 		padding: 10px;
 		margin: 15px auto 0;
 	}

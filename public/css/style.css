@@ -422,6 +422,9 @@ p {
 	.fv_txt, .fv_form {
 		width: 100%;
 	}
+	.fv_txt ul li p {
+		font-size: 1rem;
+	}
 	.fv_txt ul li {
 		width: 30%;
 		margin: 5px;

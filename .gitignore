@@ -10,4 +10,4 @@ npm-debug.log
 yarn-error.log
 *.swp
 *.swo
-infra/mysql/mysql-data
+/infra/mysql/mysql-data
